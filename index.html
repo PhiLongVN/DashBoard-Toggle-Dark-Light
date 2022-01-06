@@ -17,11 +17,13 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        font-size: 11px;
+        font-size: 30px;
         text-align: center;
+        padding: 1rem;
+        color: aqua;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(117, 76%, 43%);
       }
     </style>
   </head>
@@ -33,15 +35,18 @@
 
       <header class="head">
         <div class="head-title">
-          <h2></h2>
+          <h2>Social Media Dashboard</h2>
 
-          <span></span>
+          <span>Total Views 23,004</span>
         </div>
-        <div class="head-toggle"></div>
-        <span></span>
-        <div class="check-block">
-          <input id="checkbox" type="checkbox" />
-          <label for="checkbox">ccc</label>
+        <div class="head-toggle">
+          <span class="mode">Light Mode</span>
+          <div class="check-block">
+            <input id="checkbox" type="checkbox" />
+            <label class="check-box" for="checkbox">
+              <div class="ball"></div>
+            </label>
+          </div>
         </div>
       </header>
 
@@ -50,58 +55,71 @@
       <!-- ======================================================================= -->
       <section class="sec1">
         <!-- facebokk -->
-        <div class="sec1-block">
+        <div class="sec1-block facebokk">
           <span class="icon">
             <img src="./images/icon-facebook.svg" alt="" />
             @nathanf
           </span>
-          <h2 class="folower">1987</h2>
-          <strong>followers</strong>
+          <div class="follow">
+            <h2 class="folower">1987</h2>
+            <strong>followers</strong>
+          </div>
           <span class="index"
             ><img src="./images/icon-up.svg" alt="" /> 12 Today</span
           >
         </div>
 
         <!-- twitter -->
-        <div class="sec1-block">
+        <div class="sec1-block twitter">
           <span class="icon">
             <img src="./images/icon-twitter.svg" alt="" />
             @nathanf
           </span>
-          <h2 class="folower">1044</h2>
-          <strong>followers</strong>
+          <div class="follow">
+            <h2 class="folower">1044</h2>
+            <strong>followers</strong>
+          </div>
           <span class="index"
             ><img src="./images/icon-up.svg" alt="" /> 99 Today</span
           >
         </div>
 
         <!-- instagram -->
-        <div class="sec1-block">
+        <div class="sec1-block instagram">
           <span class="icon">
             <img src="./images/icon-instagram.svg" alt="" />
             @nathanf
           </span>
-          <h2 class="folower">11k</h2>
-          <strong>followers</strong>
+          <div class="follow">
+            <h2 class="folower">11k</h2>
+            <strong>followers</strong>
+          </div>
           <span class="index"
             ><img src="./images/icon-up.svg" alt="" /> 1099 Today</span
           >
         </div>
         <!-- youtube -->
-        <div class="sec1-block">
+        <div class="sec1-block youtube">
           <span class="icon">
             <img src="./images/icon-youtube.svg" alt="" />
             @nathanf
           </span>
-          <h2 class="folower">8239</h2>
-          <strong>followers</strong>
-          <span class="index youtube"
+          <div class="follow">
+            <h2 class="folower">8239</h2>
+            <strong>followers</strong>
+          </div>
+          <span class="index youtube-index"
             ><img src="./images/icon-down.svg" alt="" /> 144 Today</span
           >
         </div>
       </section>
+      <!-- ======================================================================= -->
+      <!--                                OVERVIEW                                 -->
+      <!-- ======================================================================= -->
 
-      <h2>overview- today</h2>
+      <div class="overview">
+        <h2>Overview - Today</h2>
+      </div>
 
       <!-- ======================================================================= -->
       <!--                                SECTION2                                 -->
@@ -153,7 +171,7 @@
         <div class="sec2-block">
           <div class="title">
             <span>Profile Views</span>
-            <img src="./images/icon-facebook.svg" alt="" />
+            <img src="./images/icon-instagram.svg" alt="" />
           </div>
 
           <div class="index">
@@ -179,7 +197,7 @@
         <div class="sec2-block">
           <div class="title">
             <span>Likes</span>
-            <img src="./images/icon-facebook.svg" alt="" />
+            <img src="./images/icon-twitter.svg" alt="" />
           </div>
 
           <div class="index">
@@ -225,7 +243,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Huynh Phi Long</a>.
     </div>
 
     <script src="./script/script.js"></script>

@@ -52,4 +52,433 @@ picture {
     scroll-behavior: auto !important;
   }
 }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #20222f), color-stop(20%, #1d2029));
+  background: linear-gradient(to bottom, #20222f 20%, #1d2029 20%);
+}
+
+/* ========================================================================== */
+/*                              TOOGLE DARK-LIGHT                             */
+/* ========================================================================== */
+body.active span,
+body.active h2,
+body.active strong,
+body.active .attribution {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
+}
+
+body.active {
+  background: #ffffff36;
+}
+
+body.active .sec2-block,
+body.active .sec1-block {
+  background: #f0f3fa;
+}
+
+body.active .head-toggle .mode,
+body.active .overview h2 {
+  color: #888999;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 30px auto;
+  padding: 0 1rem;
+}
+
+/* ========================================================================== */
+/*                                    .HEAD                                   */
+/* ========================================================================== */
+.head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ----------------------------- // .head-title ----------------------------- */
+.head-title h2 {
+  color: #e2dede;
+}
+
+.head-title span {
+  color: #959abb;
+  font-weight: 600;
+}
+
+/* ------------------------------ .head-toggle ------------------------------ */
+.head-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.head-toggle .mode {
+  color: white;
+  font-weight: 600;
+}
+
+.head-toggle .check-block {
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.head-toggle .check-block input {
+  top: 0px;
+  position: absolute;
+  opacity: 0;
+}
+
+.head-toggle .check-block input:checked ~ .check-box > .ball {
+  left: 53%;
+}
+
+.head-toggle .check-block input:checked ~ .check-box {
+  background: -webkit-gradient(linear, left top, right top, from(#1977c4), to(#3dd18c));
+  background: linear-gradient(to right, #1977c4, #3dd18c);
+}
+
+.head-toggle .check-block .check-box {
+  position: relative;
+  background: #a9b1b1;
+  width: 45px;
+  height: 22px;
+  border-radius: 100px;
+  display: block;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.head-toggle .check-block .check-box:hover {
+  opacity: 1;
+}
+
+.head-toggle .check-block .check-box .ball {
+  position: absolute;
+  top: 3px;
+  left: 10%;
+  width: 16px;
+  height: 16px;
+  background: #303b54;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* ========================================================================== */
+/*                                    SEC1                                    */
+/* ========================================================================== */
+.sec1 {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ------------------------------- .sec1-block ------------------------------ */
+.sec1-block {
+  width: 100%;
+  border-radius: 5px;
+  padding: 2rem 2rem;
+  background: #252b43;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.sec1-block:hover {
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+}
+
+.sec1-block .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  color: #cddbe7;
+}
+
+.sec1-block .follow {
+  text-align: center;
+}
+
+.sec1-block .follow h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.sec1-block .follow strong {
+  text-transform: uppercase;
+  color: #959abb;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.sec1-block .index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+  color: #26ab9f;
+  font-weight: 700;
+}
+
+.sec1-block .youtube-index {
+  color: #924d65;
+}
+
+/* --------------------------------- border --------------------------------- */
+.facebokk {
+  border-top: #168dee solid 5px;
+}
+
+.twitter {
+  border-top: #168dee solid 5px;
+}
+
+.instagram {
+  border-top: #ef897e solid 5px;
+}
+
+.youtube {
+  border-top: #c2042b solid 5px;
+}
+
+/* ========================================================================== */
+/*                                    .overview                                   */
+/* ========================================================================== */
+.overview {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* ========================================================================== */
+/*                                    .SEC2                                   */
+/* ========================================================================== */
+.sec2 {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ------------------------------- .sec2-block ------------------------------ */
+.sec2-block {
+  border-radius: 5px;
+  background: #252b43;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.sec2-block:hover {
+  opacity: 1;
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+}
+
+.sec2-block .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.sec2-block .title span {
+  color: #959abb;
+  font-weight: 600;
+}
+
+.sec2-block .index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.sec2-block .index strong {
+  font-size: 2rem;
+  color: white;
+}
+
+.sec2-block .index span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  color: #3dd18c;
+  font-weight: 700;
+}
+
+.sec2-block .index .red {
+  color: #c92525;
+}
+
+@media screen and (max-width: 1023px) {
+  /* ========================================================================== */
+  /*                                    .SEC1                                   */
+  /* ========================================================================== */
+  .sec1 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .sec2 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550.98px) {
+  .head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+    /* ------------------------------- .head-title ------------------------------ */
+    /* ------------------------------ .head-toggle ------------------------------ */
+  }
+  .head .head-title {
+    padding-bottom: 2rem;
+    width: 100%;
+    border-bottom: solid 1px #aeb2cd;
+  }
+  .head .head-toggle {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sec1 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .sec2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
 /*# sourceMappingURL=main.css.map */
